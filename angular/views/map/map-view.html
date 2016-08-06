@@ -1,0 +1,59 @@
+<!-- <style type="text/css">
+  .angular-google-map-container { height: 100%; }
+</style> -->
+
+<div class="jumbotron text-center">
+
+  <h1>Maps and Stuff</h1>
+  <p>{{ vm.tagline }}</p>
+  <div class="row">
+    <div class="col-md-12">
+      <ui-gmap-google-map
+        center='vm.center'
+        zoom='vm.map.zoom'
+        options='vm.map.options'
+        bounds='vm.map.bounds'
+        pan='false'>
+        <ui-gmap-map-type options="vm.map.squaresMapType" id="vm.map.options.mapTypeId"></ui-gmap-map-type>
+        <!-- other ui-gmap-directives here -->
+
+      </ui-gmap-google-map>
+
+
+    <!-- <ui-gmap-google-map
+      center="vm.center"
+      zoom="vm.map.zoom"
+      draggable="true"
+      options="vm.map.options"
+      bounds="vm.map.bounds">
+        <ui-gmap-markers
+          models="vm.adventures"
+            
+          idKey="id"
+          doCluster="true"
+          clusterOptions="cluster"
+            
+          coords="'vm.coords'"
+          icon="'url'"
+          click="onClick">
+            <ui-gmap-windows
+              options="'windowOptions'"
+              closeClick="closeClick">
+                {{title}}
+            </ui-gmap-windows>
+        </ui-gmap-markers>
+        <ui-gmap-marker
+          idKey="vm.User.id"
+          coords="vm.User.coords"
+          icon="vm.User.url"
+          click="vm.openWindow(vm.User.coords)">
+            <ui-gmap-window
+              options="windowOptions"
+              closeClick="vm.closeWindow()">
+                <div>{{vm.userTitle}}</div>
+            </ui-gmap-window>
+        </ui-gmap-marker>
+      <ui-gmap-layer namespace="weather" type="WeatherLayer" show="true"></ui-gmap-layer>
+    </ui-gmap-google-map> -->
+  </div>
+</div>

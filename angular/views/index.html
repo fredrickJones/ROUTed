@@ -1,0 +1,59 @@
+<!-- public/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+
+  <title>Starter Node and Angular</title>
+
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="shared/libraries/bootstrap/dist/css/bootstrap.min.css">
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="framework/styles/style.css">
+</head>
+<body ng-app="routed" ng-controller="MasterCtrl as master">
+  <div class="container">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="routed">ROUTed</a>
+      </div>
+
+      <!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+      <ul class="nav navbar-nav">
+        <li><a ui-sref="map">Routes</a></li>
+      </ul>
+    </nav>
+
+    <!-- ANGULAR DYNAMIC CONTENT -->
+    <ui-view></ui-view>
+
+
+    <!-- JS -->
+    <script src="shared/libraries/lodash/dist/lodash.min.js"></script>
+    <script src="shared/libraries/angular/angular.min.js"></script>
+    <script src="shared/libraries/angular-route/angular-route.min.js"></script>
+    <script src="shared/libraries/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="shared/libraries/jquery/dist/jquery.min.js"></script>
+    <script src="shared/libraries/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="shared/libraries/angular-simple-logger/dist/angular-simple-logger.min.js"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGhVPYglL71Y7AXoJBZUoHVYszan04PK4&callback=initMap" async defer></script> -->
+    <script src="shared/libraries/angular-google-maps/dist/angular-google-maps.min.js"></script>
+
+    <!-- ANGULAR CUSTOM CONTROLLERS -->
+    <script src="shared/routed.js"></script>
+    <script src="shared/master-controller.js"></script>
+    <script src="views/home/home-controller.js"></script>
+    <!-- <script src="views/nerd/nerd-controller.js"></script> -->
+    <script src="views/map/map-controller.js"></script>
+    <!-- ANGULAR CUSTOM SERVICES -->
+    <script src="shared/services/adventure-service.js"></script>
+    <script src="shared/services/location-service.js"></script>
+    
+  </div>
+</body>
+</html>
+
+
